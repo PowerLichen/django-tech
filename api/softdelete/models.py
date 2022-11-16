@@ -14,6 +14,6 @@ class Bean(models.Model):
     objects = ActiveManager()
 
 class Coffee(models.Model):
-    bean = models.ForeignKey('Bean', related_name='coffee-bean', on_delete=models.SET_NULL, null=True)
+    bean = models.ForeignKey('Bean', related_name='coffeebean', on_delete=models.SET_NULL, null=True)
     syrup = models.CharField(max_length=10)
     price = models.IntegerField()

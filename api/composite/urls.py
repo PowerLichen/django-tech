@@ -1,7 +1,12 @@
 from django.urls import include, path
+from rest_framework import routers
 
 from api.composite import views
 
-urlpatterns = [
-    path('create/', views.CoffeeBeanCreateViewSet.as_view()),
+
+router = routers.DefaultRouter()
+router.register(r'', views.CoffeeBeanViewSet, basename="composite-bean")
+
+urlpatterns = [ 
+    path('', include(router.urls)),
 ]

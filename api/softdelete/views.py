@@ -5,7 +5,7 @@ from api.softdelete.serializers import BeanSerializer, BeanDestroySerializer, Co
 
 
 class BeanViewSet(ModelViewSet):
-    queryset = Bean
+    queryset = Bean.objects.all()
     serializer_class = BeanSerializer
 
     def get_serializer_class(self):
@@ -21,5 +21,5 @@ class BeanViewSet(ModelViewSet):
 
 
 class CoffeeViewSet(ModelViewSet):
-    queryset = Coffee
+    queryset = Coffee.objects.all()
     serializer_class = CoffeeSerializer

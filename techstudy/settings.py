@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'api.composite.apps.CompositeConfig',
     'api.softdelete.apps.SoftdeleteConfig',
     'api.imageprocess.apps.ImageprocessConfig',
+    'api.extraaction.apps.ExtraactionConfig',
 
     'rest_framework',
 

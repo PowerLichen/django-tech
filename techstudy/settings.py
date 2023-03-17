@@ -31,9 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'api.composite.apps.CompositeConfig',
-    'api.softdelete.apps.SoftdeleteConfig',
-    'api.imageprocess.apps.ImageprocessConfig',
+    'api.composite',
+    'api.softdelete',
+    'api.imageprocess',
+    'api.testcode',
 
     'rest_framework',
 

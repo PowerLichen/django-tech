@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'api.softdelete',
     'api.imageprocess',
     'api.testcode',
+    'api.extraaction',
 
     'rest_framework',
 

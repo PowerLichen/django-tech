@@ -10,6 +10,11 @@ class ExtraActionViewSet(ModelViewSet):
     queryset = ExtraModel.objects.all()
     serializer_class = ExtraModelSerializer
 
+    def get_queryset(self):
+        if self.action == "set_password":
+            return super().get_queryset().order_by('-created_at')
+        return super().get_queryset()
+
     def get_serializer_class(self):
         if self.action == "set_password":
             return ExtraModelPasswordSerializer
